@@ -1,1 +1,1 @@
-S2 Class: Exercise 1
+S2 Class: Exercises
