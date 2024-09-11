@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap');
+
+@font-face {
+    font-family: Prout;
+    src: url('../fonts/RampartOne-Regular.ttf');
+}
+
+h1 {
+    font-size: 80px;
+    font-style: italic;
+    background-color: purple;
+    color: white;
+}
+
+.paragraphe {
+    text-align: center;
+}
+
+#paragraphe1 {
+    font-family: 'Coming Soon';
+    color: tomato;
+    letter-spacing: 5px;
+    line-height: 35px;
+}
+
+#paragraphe2 {
+    font-family: Prout;
+    text-decoration: underline dotted black;
+    font-weight: bold;
+    text-transform: uppercase;
+}

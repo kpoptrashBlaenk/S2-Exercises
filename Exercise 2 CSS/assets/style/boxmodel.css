@@ -1,0 +1,40 @@
+/*
+    Ne pas tenir compte du CSS utilisé à des infos pédagogiques d'explications visibles sur la page web
+*/
+*{
+    box-sizing: border-box;
+}
+
+#container {
+    height:500px;
+    background-color: green;
+    padding-top: 50px;
+}
+
+#box {
+    width: 400px;
+    height: 400px;
+    background-color: orange;
+    margin: auto;
+    padding-top: 90px;
+    border: 5px solid;
+}
+
+#inbox {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    background-color: #fff;
+}
+
+#container2 {
+    box-sizing: content-box;
+}
+
+#container2 div {
+    border: 1px solid black;
+    padding: 10px;
+}
+/* ------------------------
+    Fin du CSS explicatif
+--------------------------*/

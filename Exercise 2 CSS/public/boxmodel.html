@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Intro CSS - BoxModel</title>
+    <link rel="stylesheet" href="../../../assets/style/default.css">
+    <link rel="stylesheet" href="../assets/style/boxmodel.css">
+</head>
+<body>
+    <main class="corps">
+        <header>
+            <a href="../index.html">Intro CSS - Accueil</a>
+            <h1>Intro CSS - BoxModel</h1>
+        </header>
+        <article>
+            <section>
+                Pour un élément box (avec la bordure noir) vous aurez toujours :
+                <ul>
+                    <li>Les marges extérieurs (en vert) => margin</li>
+                    <li>Les marges intérieurs (en orange) => padding</li>
+                    <li>la bordure (en noir) => border</li>
+                    <li>la taille du contenu (en blanc) => width height</li>
+                </ul>
+                <em>Ces éléments sont visibles et modifiables à la volée dans le panneau du développeur de votre navigateur en bas des propriétés CSS (MAJ+CTRL+I ou F12)</em>
+                <br>
+                <div id="container">
+                    margin
+                    <div id="box">
+                        padding 
+                        <div id="inbox">
+                            test
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <p>
+                    Box-sizing est une propriété qui permet de changer le comprotement de calcul du boxmodel <br><a href="https://developer.mozilla.org/fr/docs/Web/CSS/box-sizing" target="_blank">Explications parfaites !</a>
+                </p>
+                <em>Réalisation simple d'une "cible" en content-box</em>
+                <div id="container2">
+                    <div>
+                        <div>
+                            <div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr>
+            <section>
+                <ul>
+                    <li>Réalisez le script permettat de créer 4 carrés (divs) de 50px disposant chacune de bordures différentes avec un texte à l'intérieur  <a href="https://developer.mozilla.org/fr/docs/Web/CSS/border-style">Bordures</a> </li>
+                    <li>Utilisez des marges différentes
+                        <ul>
+                            <li>1er carré : un espace de 50px en haut et en bas sans padding</li>
+                            <li>2ème carré : margin => 50px 30px 40px et un padding de 20px</li>
+                            <li>3ème carré : margin 50px et 40px puis un padding de 5px 20px 30px</li>
+                            <li>le dernier carré : sans marge et un padding de 10px et 20px</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </article>
+        <div class="blank"></div>
+    </main>
+</body>
+</html>

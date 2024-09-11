@@ -1,0 +1,45 @@
+#center {
+    width: 700px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+#center img {
+    /*
+        Le ratio de l'image est respecté si on ne précise qu'une seule taille
+        (width ou height)
+    */
+    width: 600px;
+    /* height:150px; */
+}
+
+.hatsune {
+    color: white;
+    width: 400px;
+    height: 400px;
+    margin: 20px auto;
+    border: 1px solid black;
+    background-image:url(../img/hatsune.jpg);
+}
+
+/*
+    background-size: 
+    - cover : recadrer l'image dans la zone disponible (choix par défaut)
+    - contain : contenir l'image en entier au moins une fois
+*/
+
+#hatsune1 {
+    background-size: cover;
+    /*
+        En cover, si l'image ne s'affiche pas où on veut, on va pouvoir racadrer l'image grâce à background-position: center | left | right | top | bottom ou une combinaison cohérente de deux entre eux 
+    */
+    background-position: right;
+}
+
+#hatsune2 {
+    background-size: contain;
+    /*
+        On peut définir la répétition selon l'axe ou de manière générale no-repeat | repeat-x | repeat-y
+    */
+    background-repeat: no-repeat;
+}
