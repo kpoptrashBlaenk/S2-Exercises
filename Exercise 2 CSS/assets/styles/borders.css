@@ -1,0 +1,26 @@
+.box {
+    width: 50px;
+    height: 50px;
+}
+
+#box1 {
+    border: 7px solid orange;
+    margin: 20px auto;
+}
+
+#box2 {
+    border: 5px double blue;
+    margin: 50px 30px 40px;
+    padding: 20px;
+}
+
+#box3 {
+    border: 7px dashed red;
+    margin: 50px 40px;
+    padding: 5px 20px 30px;
+}
+
+#box4 {
+    border: 3px solid purple;
+    padding: 10px 20px
+}
