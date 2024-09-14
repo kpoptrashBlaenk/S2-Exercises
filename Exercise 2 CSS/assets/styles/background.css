@@ -1,0 +1,49 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap');
+
+/* Backgrounds */
+#Koko {
+    color: white;
+    height: 400px;
+    width: 400px;
+    background-image: url(../images/Kouko.jpg);
+    background-size: contain;
+}
+
+#Koko div {
+    height: 50%;
+    width: 50%;
+    background-size: contain;
+}
+
+#Adolf {
+    background-image: url(../images/Adolf.jpg);
+}
+#Joseph {
+    background-image: url(../images/Joseph.jpg);
+}
+#Heinrich {
+    background-image: url(../images/Heinrich.jpg);
+}
+
+/* Fonts */
+
+@font-face {
+    font-family: Galactic Basic;
+    src: url('../fonts/galbasic.ttf');
+}
+
+
+#paragraphs {
+    width: 400px;
+}
+
+#paragraph1 {
+    text-align: justify;
+    font-family: 'Coming Soon';
+}
+#paragraph2 {
+    font-family: 'Galactic Basic';
+}
+
+
