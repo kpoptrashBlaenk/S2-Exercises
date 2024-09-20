@@ -1,3 +1,31 @@
+/* sorry, had to cheat, had no better idea */
+@media (max-width: 850px) {
+    article:nth-child(1), article:nth-child(2){
+        flex-basis: 50%;
+    }
+
+    article:nth-child(3){
+        flex-basis: 100%;
+    }
+}
+
+#Aside1 {
+    background-color: yellow;
+    flex: 1;
+}
+
+#Aside2 {
+    background-color: purple;
+    flex: 1;
+}
+
+#article {
+    display: flex;
+    flex: 3;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 .container {
     text-align: center;
     height: 100vh;
@@ -28,36 +56,10 @@ main {
     justify-content: space-between;
 }
 
-#Aside1 {
-    background-color: yellow;
-    flex: 1;
-}
-
-#article {
-    display: flex;
-    flex: 3;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
 article {
     background-color: dodgerblue;
     box-sizing: border-box;
     border: 1px dashed white;
-    flex: 0 0 300px;
-}
-
-article:nth-child(1),
-article:nth-child(2) {
-    flex-grow: 1;
-}
-
-article:nth-child(3) {
-    flex-basis: 100%;
-}
-
-#Aside2 {
-    background-color: purple;
     flex: 1;
 }
 
