@@ -1,0 +1,188 @@
+* {
+    box-sizing: border-box;
+}
+
+.grid {
+    border: 3px solid black;
+}
+
+#grid {
+    margin: 20px;
+    height: 600px;
+    border: 1px solid black;
+    display: grid;
+    grid-template-areas:
+    /* 18 */
+    "g1 g2 g2 g2 g2 g2 g2 g2 g3 g3 g3 g3 g3 g3 g3 g3 g4 y1"
+    "g1 b1 b1 b1 b1 b1 b1 b1 g5 g5 g5 b2 b2 b2 b2 b2 g4 y1"
+    "g1 b1 b1 b1 b1 b1 b1 b1 g5 g5 g5 b2 b2 b2 b2 b2 g4 y1"
+    "d1 g6 g6 d2 g7 g7 g7 g8 y2 y2 y2 r1 r1 r1 r1 r2 g4 y1"
+    "d1 g6 g6 d2 g7 g7 g7 g8 y2 y2 y2 r1 r1 r1 r1 r2 g4 y1"
+    "d1 g6 g6 d2 g7 g7 g7 g8 y2 y2 y2 r1 r1 r1 r1 r2 g4 y1"
+    "d1 g6 g6 d2 g7 g7 g7 g8 y2 y2 y2 r1 r1 r1 r1 r2 g4 y1"
+    "d1 g6 g6 d2 g7 g7 g7 g8 y2 y2 y2 r1 r1 r1 r1 r2 g4 y1"
+    "d1 g6 g6 d2 g7 g7 g7 g8 y2 y2 y2 r1 r1 r1 r1 r2 g4 y1"
+    "d1 g6 g6 d2 y3 r3 r3 r3 b3 b3 b3 g9 g9 g9 g9 g10 d3 d3"
+    "d1 g6 g6 d2 y3 r3 r3 r3 b3 b3 b3 g9 g9 g9 g9 g10 d3 d3"
+    "g11 r4 r4 d2 y4 g12 g12 g12 g12 g12 g13 g13 g13 g13 b4 y5 g14 g14"
+    "g11 r4 r4 d2 y4 g12 g12 g12 g12 g12 g13 g13 g13 g13 b4 y5 g14 g14"
+    "g11 r4 r4 d2 y4 g12 g12 g12 g12 g12 g13 g13 g13 g13 b4 y5 g14 g14"
+    "g11 r4 r4 d2 y4 r5 r5 r5 d4 d4 d4 d4 d4 d4 g15 g15 g15 g15"
+    "g16 g16 g16 g16 y4 r5 r5 r5 d4 d4 d4 d4 d4 d4 g15 g15 g15 g15"
+}
+
+#white1 {
+    grid-area: g1;
+}
+
+#white2 {
+    grid-area: g2;
+}
+
+#white3 {
+    grid-area: g3;
+}
+
+#white4 {
+    grid-area: g4;
+}
+
+#white5 {
+    grid-area: g5;
+}
+
+#white6 {
+    grid-area: g6;
+}
+
+#white7 {
+    grid-area: g7;
+}
+
+#white8 {
+    grid-area: g8;
+}
+
+#white9 {
+    grid-area: g9;
+}
+
+#white10 {
+    grid-area: g10;
+}
+
+#white11 {
+    grid-area: g11;
+}
+
+#white12 {
+    grid-area: g12;
+}
+
+#white13 {
+    grid-area: g13;
+}
+#white14 {
+    grid-area: g14;
+}
+
+#white15 {
+    grid-area: g15;
+}
+
+#white16 {
+    grid-area: g16;
+}
+
+
+#blue1 {
+    grid-area: b1;
+}
+
+#blue2 {
+    grid-area: b2;
+}
+
+#blue3 {
+    grid-area: b3;
+}
+
+#blue4 {
+    grid-area: b4;
+}
+
+#red1 {
+    grid-area: r1;
+}
+
+#red2 {
+    grid-area: r2;
+}
+
+#red3 {
+    grid-area: r3;
+}
+
+#red4 {
+    grid-area: r4;
+}
+
+#red5 {
+    grid-area: r5;
+}
+
+#black1 {
+    grid-area: d1;
+}
+
+#black2 {
+    grid-area: d2;
+}
+
+#black3 {
+    grid-area: d3;
+}
+
+#black4 {
+    grid-area: d4;
+}
+
+#yellow1 {
+    grid-area: y1;
+}
+
+#yellow2 {
+    grid-area: y2;
+}
+
+#yellow3 {
+    grid-area: y3;
+}
+
+#yellow4 {
+    grid-area: y4;
+}
+
+#yellow5 {
+    grid-area: y5;
+}
+
+.white {
+    background-color: white;
+}
+
+.blue {
+    background-color: darkblue;
+}
+
+.red {
+    background-color: red;
+}
+
+.black {
+    background-color: black;
+}
+
+.yellow {
+    background-color: yellow;
+}
