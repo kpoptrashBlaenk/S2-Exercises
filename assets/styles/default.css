@@ -4,12 +4,22 @@ body {
 }
 
 /* Colors */
+.bg-pink-secondary {
+    background-color: hotpink;
+}
 .bg-pink-tertiary {
     background-color: pink;
 }
 
 .text-pink-secondary {
     color: hotpink;
+}
+
+/* Buttons */
+.btn.bg-pink-secondary:hover, .btn.bg-pink-secondary:focus {
+    border: none;
+    color: white;
+    background-color: deeppink;
 }
 
 /* Cards */
