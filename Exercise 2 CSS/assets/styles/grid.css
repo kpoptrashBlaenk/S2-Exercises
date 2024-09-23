@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+section {
+    width: 600px;
+    height: 600px;
+}
+
 .grid {
     border: 3px solid black;
 }
