@@ -70,3 +70,14 @@ tbody > tr:nth-child(odd) > td {
 tbody > tr:nth-child(even) > td {
   background-color: orange;
 }
+
+/*-------------------------- Image --------------------------*/
+#containerImg:hover ~ #containerTxt:after {
+    content: "OMG IN PROMOTION WOOOOOW";
+    color: red;
+    font-weight: bold;
+}
+
+#prod > button:hover:after {
+    content: url('../images/paiement.png');
+}
