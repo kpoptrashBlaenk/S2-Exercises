@@ -1,0 +1,14 @@
+/* Links */
+.link:hover {
+    color: red;
+    background-color: green;
+    text-decoration: none;
+}
+
+.link:visited {
+    color:deeppink;
+}
+
+.link:active {
+    font-size: 80px;
+}
