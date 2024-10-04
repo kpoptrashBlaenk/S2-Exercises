@@ -1,14 +1,72 @@
-/* Links */
+/*-------------------------- Links --------------------------*/
 .link:hover {
-    color: red;
-    background-color: green;
-    text-decoration: none;
+  color: red;
+  background-color: green;
+  text-decoration: none;
 }
 
 .link:visited {
-    color:deeppink;
+  color: deeppink;
 }
 
 .link:active {
-    font-size: 80px;
+  font-size: 80px;
+}
+
+/*-------------------------- Table --------------------------*/
+/* General */
+table {
+  border-collapse: collapse;
+}
+
+table * :not(caption) {
+  border: 1px gray solid;
+  padding: 5px;
+  text-align: center;
+}
+
+caption {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Head */
+thead > tr:nth-child(1) > th:nth-child(3) {
+  border-top-color: transparent;
+  border-right-color: transparent;
+}
+
+thead > tr:nth-child(1) > th:nth-child(2) {
+  color: blue;
+}
+
+/* Body Left */
+tbody > tr:nth-child(odd) > td:nth-child(1) {
+  background-color: blueviolet;
+}
+
+tbody > tr:nth-child(even) > td:nth-child(1) {
+  background-color: gray;
+}
+
+tbody > tr > td:nth-child(1) {
+  color: white;
+}
+
+/* Body Right */
+tbody > tr:nth-child(odd) > td:last-child {
+  background-color: lightskyblue;
+}
+
+tbody > tr > td:nth-child(1) {
+  color: white;
+}
+
+/* Body Middle */
+tbody > tr:nth-child(odd) > td {
+  background-color: red;
+}
+
+tbody > tr:nth-child(even) > td {
+  background-color: orange;
 }
