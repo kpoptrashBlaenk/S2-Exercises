@@ -1,0 +1,14 @@
+article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+section {
+    background-color: gray;
+    height: 30vh;
+    width: 45vw;
+    border-radius: 25px;
+    text-align: center;
+}
