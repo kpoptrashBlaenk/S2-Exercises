@@ -89,3 +89,45 @@ section {
     top: 90px;
   }
 }
+
+/* LOADER */
+#loader div {
+  display: flex;
+  justify-content: center;
+}
+
+#loader div > div {
+  border: solid 1px black;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+#loader div > div:nth-child(1) {
+  animation-name: loading;
+  background-color: black;
+}
+
+#loader div > div:nth-child(2) {
+  animation-name: loading;
+  background-color: gray;
+  animation-delay: 0.5s;
+}
+
+#loader div > div:nth-child(3) {
+  animation-name: loading;
+  background-color: white;
+  animation-delay: 1s;
+}
+
+@keyframes loading {
+  0% {
+    background-color: black;
+  }
+  100% {
+    background-color: white;
+  }
+}
