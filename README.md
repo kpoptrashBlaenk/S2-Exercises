@@ -8,9 +8,7 @@
 - Backgrounds
 - Borders & Margin
 - Positioning
-
-
 - Flex
 - Grids
-
 - Pseudo Classes/Elements
+- Animations
