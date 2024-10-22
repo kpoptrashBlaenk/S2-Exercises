@@ -1,41 +1,41 @@
 * {
-    margin: 0;
-    padding: 5px
+  margin: 0;
+  padding: 5px;
 }
 
 body {
-    height: 97vh;
-    box-sizing: border-box;
+  height: 97vh;
+  box-sizing: border-box;
 }
 
-h1, a, footer {
-    background-color: blue;
-    color: white;
+h1,
+a,
+footer {
+  background-color: blue;
+  color: white;
 }
-
 
 /* HEADER */
 header {
-    text-align: center;
+  text-align: center;
 }
 
 h1 {
-    text-align: left;
+  text-align: left;
 }
 
 button {
-    background-color: transparent;
-    color: white;
+  background-color: transparent;
+  color: white;
 }
 
 a {
-    display: block;
+  display: block;
 }
 
 nav {
-    background-color: purple;
+  background-color: purple;
 }
-
 
 /* CONTENT */
 img {
@@ -44,27 +44,26 @@ img {
 }
 
 section {
-    height: 15%;
+  height: 15%;
 }
 
 aside {
-    background-color: palevioletred;
-    color: white;
-    border: 1px solid pink;
+  background-color: palevioletred;
+  color: white;
+  border: 1px solid pink;
 }
-
 
 /* FOOTER */
 footer {
-    padding: 0;
+  padding: 0;
 }
 
 ul {
-    border: 1px solid pink;
+  border: 1px solid pink;
 }
 
 li {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 /* MEDIUM SCREEN */
