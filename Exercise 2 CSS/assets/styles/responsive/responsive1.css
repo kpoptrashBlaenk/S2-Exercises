@@ -62,7 +62,7 @@ footer {
   }
 
   section {
-    height: 67vh;
+    height: 66vh;
     width: 80%;
     float: left;
   }
@@ -73,15 +73,31 @@ footer {
 
   aside:nth-of-type(1) {
     float: left;
-    height: 67vh;
+    height: 66vh;
   }
 
   aside:nth-of-type(2) {
     float: right;
-    height: 67vh;
+    height: 66vh;
   }
 
   footer {
     clear: both;
+  }
+}
+
+/* Large Screen */
+@media screen and (min-width: 1200px) {
+  li {
+    margin: 2px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  p {
+    width: 32.9%;
+    height: 90%;
+    margin: 2px;
+    float: left;
   }
 }
