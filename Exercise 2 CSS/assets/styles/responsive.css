@@ -65,6 +65,10 @@ ul {
 
 li {
     list-style-type: none;
+}
+
+/* MEDIUM SCREEN */
+@media screen and (min-width: 768px) {
   button {
     display: none;
   }
@@ -93,3 +97,30 @@ li {
   }
 }
 
+/* LARGE SCREEN */
+@media screen and (min-width: 992px) {
+  img {
+    height: 55%;
+  }
+
+  section {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 59%;
+  }
+
+  aside {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 20%;
+    height: 20%;
+  }
+
+  aside:nth-of-type(1) {
+    float: left;
+  }
+
+  aside:nth-of-type(2) {
+    float: right;
+  }
+}
