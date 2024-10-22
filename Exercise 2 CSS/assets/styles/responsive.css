@@ -38,6 +38,11 @@ nav {
 
 
 /* CONTENT */
+img {
+  /* width: 100%; */
+  display: none;
+}
+
 section {
     height: 15%;
 }
@@ -60,4 +65,31 @@ ul {
 
 li {
     list-style-type: none;
+  button {
+    display: none;
+  }
+
+  a {
+    display: inline;
+  }
+
+  img {
+    display: block;
+  }
+
+  section {
+    height: 20%;
+  }
+
+  aside {
+    display: inline-block;
+    width: 48%;
+  }
+
+  ul {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 32.9%;
+  }
 }
+
