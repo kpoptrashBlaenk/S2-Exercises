@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 5px
+}
+
+body {
+    height: 97vh;
+    box-sizing: border-box;
+}
+
+h1, a, footer {
+    background-color: blue;
+    color: white;
+}
+
+
+/* HEADER */
+header {
+    text-align: center;
+}
+
+h1 {
+    text-align: left;
+}
+
+button {
+    background-color: transparent;
+    color: white;
+}
+
+a {
+    display: block;
+}
+
+nav {
+    background-color: purple;
+}
+
+
+/* CONTENT */
+section {
+    height: 15%;
+}
+
+aside {
+    background-color: palevioletred;
+    color: white;
+    border: 1px solid pink;
+}
+
+
+/* FOOTER */
+footer {
+    padding: 0;
+}
+
+ul {
+    border: 1px solid pink;
+}
+
+li {
+    list-style-type: none;
+}
