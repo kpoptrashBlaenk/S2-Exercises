@@ -1,5 +1,6 @@
 * {
   padding: 4px;
+  box-sizing: border-box;
 }
 
 html {
@@ -15,7 +16,7 @@ main {
 }
 
 header {
-  height: 37vh;
+  height: 40vh;
   background-color: red;
   text-align: center;
 }
@@ -31,7 +32,7 @@ aside:nth-of-type(1) {
 }
 
 section {
-  height: 41vh;
+  height: 43vh;
   background-color: aqua;
 }
 
@@ -49,8 +50,38 @@ footer {
   background-color: aquamarine;
 }
 
-
 /* Medium Screen */
-@media screen and (min-width: 900) {
-    
+@media screen and (min-width: 900px) {
+  header {
+    height: 27vh;
+  }
+
+  li {
+    display: inline;
+    margin: -2px;
+  }
+
+  section {
+    height: 67vh;
+    width: 80%;
+    float: left;
+  }
+
+  aside {
+    width: 10%;
+  }
+
+  aside:nth-of-type(1) {
+    float: left;
+    height: 67vh;
+  }
+
+  aside:nth-of-type(2) {
+    float: right;
+    height: 67vh;
+  }
+
+  footer {
+    clear: both;
+  }
 }
