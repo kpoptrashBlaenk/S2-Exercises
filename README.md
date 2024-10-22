@@ -12,3 +12,4 @@
 - Grids
 - Pseudo Classes/Elements
 - Animations
+- Responsive
