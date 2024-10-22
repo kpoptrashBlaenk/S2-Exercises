@@ -1,7 +1,27 @@
+#cube {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  background-color: black;
+  display: none;
+  animation: move 5s infinite linear;
+}
+
+@keyframes move {
+  from {
+    left: 0;
+  }
+  to {
+    left: 800px;
+  }
+}
+
 @media screen and (min-width: 900px) {
-    img {
-        display: none;
-    }
+  img {
+    display: none;
+  }
 
-
+  #cube {
+    display: block;
+  }
 }
