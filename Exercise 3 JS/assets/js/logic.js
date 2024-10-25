@@ -25,3 +25,30 @@
 //     allStories += story + '\n'
 // }
 // alert(allStories)
+
+// Exercise 5
+// var i = 1;
+// var j = 2;
+// var allPrimes = 0;
+
+// // Each number
+// while (i <= 100) {
+//   var prime = true;
+
+//   //   Divided by each number before except 1 and himself
+//   for (var k = 1; k < j; k++) {
+//     if (k !== 1 && k !== j) {
+//       // Modulo = 0 -> No prime number
+//       if (j % k === 0) {
+//         prime = false;
+//       }
+//     }
+//   }
+
+//   if (prime) {
+//     i++;
+//     allPrimes += j
+//   }
+//   j++;
+// }
+// alert(`All prime numbers together: ${allPrimes}`)
