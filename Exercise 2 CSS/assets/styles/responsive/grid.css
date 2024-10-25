@@ -12,6 +12,10 @@
 
 .row {
   width: 100%;
+  text-align: center;
+}
+
+.row > * {
   display: inline-block;
 }
 
