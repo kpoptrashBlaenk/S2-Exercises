@@ -26,7 +26,8 @@
   }
 }
 
-@media screen and (min-width: 900px) {
+/* I FORGOT TO CHANGE THIS so it's 1200px now i hope it's correct */
+@media screen and (min-width: 1200px) {
   @keyframes move {
     from {
       left: 0;
