@@ -71,6 +71,10 @@ nav > div > button {
 }
 
 @media screen and (min-width: 700px) {
+  header > div {
+    display: none;
+  }
+
   nav > div > button {
     display: inline-block;
   }
