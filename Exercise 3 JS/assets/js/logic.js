@@ -10,6 +10,18 @@
 
 // Exercise 3
 // var countdown = +prompt('Seconds:');
-// for (i = countdown; i >= 0; i--) {
+// for (var i = countdown; i >= 0; i--) {
 //   setTimeout(alert(i), 1000)
 // }
+
+// Exercise 4
+// var allStories = ''
+// var stories = +prompt('Number of stories:')
+// for(var i = 0; i <= stories; i++) {
+//     var story = ''
+//     for(var j = 0; j < i+1; j++) {
+//         story += '1'
+//     }
+//     allStories += story + '\n'
+// }
+// alert(allStories)
