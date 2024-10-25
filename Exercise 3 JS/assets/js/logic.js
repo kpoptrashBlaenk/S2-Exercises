@@ -135,3 +135,13 @@
 //   var salary = employee.salary - employee.salary * (0.18 - Math.min((employee.children / 100) * 2, 0.06)) - (employee.handicap ? 0 : employee.salary * 0.07);
 //   alert(`${employee.name}: ${salary}€`);
 // }
+
+// Exercise 9
+// multiplicationTable(+prompt('A number please (1-10)'));
+// function multiplicationTable(value) {
+//   var result = '';
+//   for (var i = 1; i <= 10; i++) {
+//     result += `${i} x ${value} = ${i * value} \n`;
+//   }
+//   alert(result)
+// }
