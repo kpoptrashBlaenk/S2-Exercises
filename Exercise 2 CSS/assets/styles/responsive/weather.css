@@ -7,6 +7,10 @@ main {
   width: 100%;
 }
 
+header, article:nth-of-type(1) {
+    margin-left:30px;
+}
+
 p {
   margin-top: 0;
   margin-bottom: 0;
