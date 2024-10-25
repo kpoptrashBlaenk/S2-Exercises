@@ -48,18 +48,19 @@ nav > div > button {
 }
 
 /* ARTICLES */
-#title {
+#articles {
   margin-top: 20px;
+  display: inline-block;
 }
 
-#articles > section {
+#articles > div > section {
   background-color: gray;
   border-radius: 10px;
   padding: 10px;
   margin: 10px;
 }
 
-#articles > section > img {
+#articles > div > section > img {
   float: left;
   margin-right: 20px;
 }
