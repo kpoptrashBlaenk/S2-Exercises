@@ -25,3 +25,16 @@
     display: block;
   }
 }
+
+@media screen and (min-width: 900px) {
+  @keyframes move {
+    from {
+      left: 0;
+      top: 0;
+    }
+    to {
+      left: 800px;
+      top: 100px;
+    }
+  }
+}
