@@ -145,3 +145,10 @@
 //   }
 //   alert(result)
 // }
+
+// Exercise 10
+// schaltjahr(+prompt('Enter a year:'));
+// function schaltjahr(value) {
+//     var schaltjahr = value % 4 === 0
+//     alert(`${value} is ${schaltjahr ? '' : 'not '}a Schaltjahr`)
+// }
