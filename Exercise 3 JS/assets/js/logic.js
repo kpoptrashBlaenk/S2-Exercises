@@ -152,3 +152,23 @@
 //     var schaltjahr = value % 4 === 0
 //     alert(`${value} is ${schaltjahr ? '' : 'not '}a Schaltjahr`)
 // }
+
+// Exercise 11
+// showFullNumber(prompt('Give a number between 0 and 5'));
+// function showFullNumber(value) {
+//   var values = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five'];
+//   switch (parseInt(value)) {
+//     case 0:
+//     case 1:
+//     case 2:
+//     case 3:
+//     case 4:
+//     case 5:
+//       var message = values[parseInt(value)];
+//       break;
+//     default:
+//       var message = `Error: ${value} is from type ${typeof value}`;
+//       break;
+//   }
+//   alert(message);
+// }
