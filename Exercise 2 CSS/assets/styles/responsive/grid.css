@@ -32,6 +32,15 @@ nav {
   text-align: center;
 }
 
+/* TITLE */
+#title {
+  margin-top: 20px;
+}
+
+#title > section {
+  margin: 10px;
+}
+
 @media screen and (min-width: 900px) {
   .fluid-container {
     padding: 10px;
