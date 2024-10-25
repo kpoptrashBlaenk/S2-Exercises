@@ -61,3 +61,45 @@
 //     naturalNumber--
 // }
 // alert(`Result: ${naturalResult}`)
+
+// Exercise 7
+// var noPassword = [];
+// var online = [];
+// var shortPassword = [];
+// var users = [
+//   {
+//     name: 'Aldin',
+//     age: 24,
+//     password: 'password1',
+//     online: true,
+//   },
+//   {
+//     name: 'Muris',
+//     age: 19,
+//     password: 'yo',
+//     online: false,
+//   },
+//   {
+//     name: 'Kenan',
+//     age: 15,
+//     password: '',
+//     online: false,
+//   },
+// ];
+
+// for (var i = 0; i < users.length; i++) {
+//   if (users[i].password.length === 0) {
+//     noPassword.push(users[i].name);
+//   }
+
+//   if (users[i].online) {
+//     online.push(users[i].name);
+//   }
+
+//   if (users[i].password.length < 4) {
+//     shortPassword.push(users[i].name);
+//   }
+// }
+// alert(`Users with no password: ${noPassword}`)
+// alert(`Users online: ${online}`)
+// alert(`Users with short password: ${shortPassword}`)
