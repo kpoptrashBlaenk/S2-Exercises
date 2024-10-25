@@ -52,3 +52,12 @@
 //   j++;
 // }
 // alert(`All prime numbers together: ${allPrimes}`)
+
+// Exercise 6
+// var naturalNumber = +prompt('Give a natural number:');
+// var naturalResult = 1
+// while(naturalNumber > 0) {
+//     naturalResult = naturalResult * naturalNumber
+//     naturalNumber--
+// }
+// alert(`Result: ${naturalResult}`)
