@@ -13,6 +13,19 @@
     width: 100%;
 }
 
+/* HEADER */
+header {
+    width: 100%
+}
+
+header > div:nth-child(1) {
+    float: left;
+}
+
+header > div:nth-child(2) {
+    float: right;
+}
+
 @media screen and (min-width: 900px) {
   .fluid-container {
     padding: 10px;
