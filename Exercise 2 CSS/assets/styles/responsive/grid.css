@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.fluid-container {
+  height: 100%;
+  width: 100%;
+}
+
+.row {
+    width: 100%;
+}
+
+@media screen and (min-width: 900px) {
+  .fluid-container {
+    padding: 10px;
+  }
+}
