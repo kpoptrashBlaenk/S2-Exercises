@@ -12,7 +12,7 @@
 
 .row {
   width: 100%;
-  display: inline-block
+  display: inline-block;
 }
 
 /* HEADER */
@@ -33,6 +33,11 @@ nav {
   text-align: center;
 }
 
+nav > div > button {
+  display: none;
+  margin: 20px;
+}
+
 /* TITLE */
 #title {
   margin-top: 20px;
@@ -44,19 +49,25 @@ nav {
 
 /* ARTICLES */
 #title {
-    margin-top: 20px;
-  }
+  margin-top: 20px;
+}
 
 #articles > section {
-    background-color: gray;
-    border-radius: 10px;
-    padding: 10px;
-    margin: 10px;
+  background-color: gray;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
 }
 
 #articles > section > img {
-    float: left;
-    margin-right: 20px;
+  float: left;
+  margin-right: 20px;
+}
+
+@media screen and (min-width: 700px) {
+  nav > div > button {
+    display: inline-block;
+  }
 }
 
 @media screen and (min-width: 900px) {
