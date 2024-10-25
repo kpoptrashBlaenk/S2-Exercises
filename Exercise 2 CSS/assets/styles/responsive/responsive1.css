@@ -1,0 +1,103 @@
+* {
+  padding: 4px;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: black;
+}
+
+main,
+body,
+article,
+main {
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  height: 40vh;
+  background-color: red;
+  text-align: center;
+}
+
+li {
+  background-color: brown;
+  list-style-type: none;
+}
+
+aside:nth-of-type(1) {
+  height: 5vh;
+  background-color: yellow;
+}
+
+section {
+  height: 43vh;
+  background-color: aqua;
+}
+
+p {
+  background-color: blue;
+}
+
+aside:nth-of-type(2) {
+  height: 5vh;
+  background-color: violet;
+}
+
+footer {
+  height: 5vh;
+  background-color: aquamarine;
+}
+
+/* Medium Screen */
+@media screen and (min-width: 900px) {
+  header {
+    height: 27vh;
+  }
+
+  li {
+    display: inline;
+    margin: -2px;
+  }
+
+  section {
+    height: 66vh;
+    width: 80%;
+    float: left;
+  }
+
+  aside {
+    width: 10%;
+  }
+
+  aside:nth-of-type(1) {
+    float: left;
+    height: 66vh;
+  }
+
+  aside:nth-of-type(2) {
+    float: right;
+    height: 66vh;
+  }
+
+  footer {
+    clear: both;
+  }
+}
+
+/* Large Screen */
+@media screen and (min-width: 1200px) {
+  li {
+    margin: 2px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  p {
+    width: 32.9%;
+    height: 90%;
+    margin: 2px;
+    float: left;
+  }
+}
