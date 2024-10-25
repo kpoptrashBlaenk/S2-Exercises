@@ -172,3 +172,45 @@
 //   }
 //   alert(message);
 // }
+
+// Exercise 12
+// function rollDice(numDice) {
+//   const results = [];
+//   for (var i = 0; i < numDice; i++) {
+//     results.push(Math.floor(Math.random() * 6) + 1);
+//   }
+//   return results;
+// }
+
+// function play421() {
+//   var has421 = false;
+//   var necessaryDices = [];
+//   var throws = 0;
+//   while (!has421) {
+//     var results = [];
+//     for (let i = 0; i < 3 - necessaryDices.length; i++) {
+//       throws++;
+
+//       var number = Math.floor(Math.random() * (6 - 1)) + 1;
+//       results.push(number);
+//     }
+//     console.log(results)
+//     if (results.includes(1) && !necessaryDices.includes(1)) {
+//       necessaryDices.push(1);
+//     }
+//     if (results.includes(2) && !necessaryDices.includes(2)) {
+//       necessaryDices.push(2);
+//     }
+//     if (results.includes(4) && !necessaryDices.includes(4)) {
+//       necessaryDices.push(4);
+//     }
+
+//     if (necessaryDices.length === 3) {
+//       has421 = true;
+//     }
+//   }
+
+//   alert(`Winner Winner Chicken Dinner in ${throws} throws`);
+// }
+
+// play421();
