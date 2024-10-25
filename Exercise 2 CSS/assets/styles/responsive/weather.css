@@ -1,0 +1,27 @@
+/* Global */
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+article {
+  margin-top: 20px;
+}
+
+/* Header */
+h1 {
+  margin-bottom: 5px;
+}
+
+/* Upper Part */
+#upper > section {
+  display: inline-block;
+  width: 30%;
+}
+
+#upper > section:nth-of-type(1) > * {
+  font-size: 50px;
+  display: inline-block;
+}
+
+/* Main Body */
