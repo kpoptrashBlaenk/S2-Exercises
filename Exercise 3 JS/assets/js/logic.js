@@ -103,3 +103,35 @@
 // alert(`Users with no password: ${noPassword}`)
 // alert(`Users online: ${online}`)
 // alert(`Users with short password: ${shortPassword}`)
+
+// Exercise 8
+// var employees = [
+//   {
+//     name: 'Aldin',
+//     children: 0,
+//     handicap: false,
+//     salary: 5000,
+//   },
+//   {
+//     name: 'Muris',
+//     children: 5,
+//     handicap: false,
+//     salary: 4800,
+//   },
+//   {
+//     name: 'Kenan',
+//     children: 2,
+//     handicap: true,
+//     salary: 3500,
+//   },
+//   {
+//     name: 'Sara',
+//     children: 1,
+//     handicap: false,
+//     salary: 2900,
+//   },
+// ];
+// for (var employee of employees) {
+//   var salary = employee.salary - employee.salary * (0.18 - Math.min((employee.children / 100) * 2, 0.06)) - (employee.handicap ? 0 : employee.salary * 0.07);
+//   alert(`${employee.name}: ${salary}€`);
+// }
