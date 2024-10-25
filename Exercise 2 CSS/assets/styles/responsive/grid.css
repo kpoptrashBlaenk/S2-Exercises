@@ -41,6 +41,23 @@ nav {
   margin: 10px;
 }
 
+/* ARTICLES */
+#title {
+    margin-top: 20px;
+  }
+
+#articles > section {
+    background-color: gray;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+
+#articles > section > img {
+    float: left;
+    margin-right: 20px;
+}
+
 @media screen and (min-width: 900px) {
   .fluid-container {
     padding: 10px;
