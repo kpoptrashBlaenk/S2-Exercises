@@ -1,0 +1,7 @@
+body > div {
+  margin-top: 20px;
+}
+
+.invisible {
+  color: transparent;
+}

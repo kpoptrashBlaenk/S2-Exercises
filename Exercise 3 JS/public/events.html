@@ -4,12 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Events</title>
+    <link href="../assets/styles/events.css" type="text/css" rel="stylesheet" />
   </head>
   <body>
     <!-- Exercise 1 -->
     <div id="ex1">
       <button id="click">Click Me</button>
       <span id="iterations"></span>
+    </div>
+
+    <!-- Exercise 2 -->
+    <div id="ex1">
+      <form>
+        <label for="lastName">Last Name</label>
+        <input id="lastName" />
+        <br />
+        <label for="firstName">First Name</label>
+        <input id="firstName" />
+        <br />
+        <label for="birthday">Birthday</label>
+        <input type="date" id="birthday" />
+        <br />
+        <button type="submit" id="sendForm">Submit</button>
+      </form>
+      <div class="invisible" id="results">
+        <span id="resLastName"></span>
+        <span id="resFirstName"></span>
+        <span id="resAge"></span>
+      </div>
     </div>
   </body>
   <script src="../assets/js/events.js"></script>
