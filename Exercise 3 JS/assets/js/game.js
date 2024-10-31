@@ -63,6 +63,8 @@ typeContainers.forEach((element) => {
 
 // Alert Button
 alertButton.addEventListener('click', () => {
+  clearBattleContainer();
+  
   alertElement.classList.remove('alertAppearAnimation');
   alertElement.classList.add('alertDisappearAnimation');
 
@@ -89,6 +91,13 @@ function animateFight(playerType) {
   setTimeout(() => {
     checkResult(playerType, enemyType);
   }, 3000);
+}
+
+function clearBattleContainer() {
+  battleContainer.classList.add('invisible');
+  vsElement.classList.add('invisible');
+  playerElement.src = '';
+  enemyElement.src = '';
 }
 
 // Check Results
