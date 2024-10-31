@@ -13,3 +13,7 @@
 - Pseudo Classes/Elements
 - Animations
 - Responsive
+
+### Exercise 3: JS
+- Variables
+- Logic
