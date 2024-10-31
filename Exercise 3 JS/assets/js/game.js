@@ -110,6 +110,7 @@ function clearBattleContainer() {
 
 // Results
 function checkResult(playerType, enemyType) {
+  // TODO: BATTLE LOGIC
   drawAlert();
 }
 
@@ -133,6 +134,7 @@ function lossAlert() {
 function drawAlert() {
   alertElement.style.backgroundColor = 'gold';
   alertText.innerText = 'Draw !';
+  alertButton.classList.add('invisible');
   alertElement.classList.remove('invisible');
   alertElement.classList.add('alertSlideAnimation');
 
@@ -141,6 +143,7 @@ function drawAlert() {
   }, 750);
 
   setTimeout(() => {
+    alertButton.classList.remove('invisible');
     alertElement.classList.add('invisible');
     alertElement.classList.remove('alertSlideAnimation');
     lockInput = false;
