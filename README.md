@@ -17,3 +17,5 @@
 ### Exercise 3: JS
 - Variables
 - Logic
+- DOM
+- Events
