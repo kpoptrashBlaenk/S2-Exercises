@@ -2,14 +2,19 @@
 @import url('./grid.css');
 
 @font-face {
-  font-family: Pokèmon;
-  src: url('../fonts/pokemon_pixel_font.ttf');
+  font-family: Pokemon;
+  src: url('../fonts/Pokemon\ Classic.ttf');
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Pokemon';
+}
+
+body {
+  overflow: hidden;
 }
 
 .container {
@@ -53,5 +58,65 @@
 @media screen and (min-width: 1200px) {
   #battleContainer {
     height: 65vh;
+  }
+}
+
+/* ######### Alert ######### */
+#alert {
+  position: absolute;
+  top: 50%;
+  transform: translateX(10vw) translateY(-50%);
+  width: 80%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#alert > * {
+  margin: 10px;
+  padding: 5px;
+}
+
+.alertSlideAnimation {
+  animation: alertSlide 3s ease-in-out;
+}
+
+.alertAppearAnimation {
+  animation: alertAppear 0.5s ease-in;
+}
+
+.alertDisappearAnimation {
+  animation: alertDisappear 0.5s ease-in;
+}
+
+@keyframes alertSlide {
+  0% {
+    transform: translateY(-50%) translateX(-100vw);
+  }
+  50% {
+    transform: translateY(-50%) translateX(10vw);
+  }
+  100% {
+    transform: translateY(-50%) translateX(100vw);
+  }
+}
+
+@keyframes alertAppear {
+  from {
+    transform: translateY(-50%) translateX(-100vw);
+  }
+  to {
+    transform: translateY(-50%) translateX(10vw);
+  }
+}
+
+@keyframes alertDisappear {
+  from {
+    transform: translateY(-50%) translateX(10vw);
+  }
+  to {
+    transform: translateY(-50%) translateX(100vw);
   }
 }

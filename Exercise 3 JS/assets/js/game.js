@@ -51,6 +51,9 @@ const vsElement = document.querySelector('#vs');
 const playerElement = document.querySelector('#playerType');
 const enemyElement = document.querySelector('#enemyType');
 const typeContainers = document.querySelectorAll('.typeContainer');
+const alertElement = document.querySelector('#alert');
+const alertText = document.querySelector('#alertText');
+const alertButton = document.querySelector('#alertButton');
 
 typeContainers.forEach((element) => {
   element.addEventListener('click', () => {
@@ -58,14 +61,37 @@ typeContainers.forEach((element) => {
   });
 });
 
+alertButton.addEventListener('click', () => {
+  alertElement.classList.remove('alertAppearAnimation');
+  alertElement.classList.add('alertDisappearAnimation');
+
+  setTimeout(() => {
+    alertElement.classList.add('invisible');
+    alertElement.classList.remove('alertDisappearAnimation');
+  }, 500);
+});
+
 function animateFight(playerType) {
   battleContainer.classList.remove('invisible');
   playerElement.src = `${typeAssetsPath}${playerType}.png`;
+
   setTimeout(() => {
     vsElement.classList.remove('invisible');
   }, 1000);
+
   setTimeout(() => {
     const enemyType = types[Math.floor(Math.random() * 18)].type;
     enemyElement.src = `${typeAssetsPath}${enemyType}.png`;
   }, 2000);
+
+  setTimeout(() => {
+    checkResult(playerType, enemyType);
+  }, 3000);
+}
+
+function checkResult(playerType, enemyType) {
+  alertElement.style.backgroundColor = 'green';
+  alertText.innerText = 'You Won !';
+  alertElement.classList.remove('invisible');
+  alertElement.classList.add('alertAppearAnimation');
 }
