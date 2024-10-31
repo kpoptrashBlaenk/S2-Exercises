@@ -80,7 +80,7 @@ body {
 }
 
 .alertSlideAnimation {
-  animation: alertSlide 3s ease-in-out;
+  animation: alertSlide 1.5s ease-in-out;
 }
 
 .alertAppearAnimation {

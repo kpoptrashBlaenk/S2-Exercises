@@ -64,7 +64,7 @@ typeContainers.forEach((element) => {
 // Alert Button
 alertButton.addEventListener('click', () => {
   clearBattleContainer();
-  
+
   alertElement.classList.remove('alertAppearAnimation');
   alertElement.classList.add('alertDisappearAnimation');
 
@@ -102,8 +102,35 @@ function clearBattleContainer() {
 
 // Check Results
 function checkResult(playerType, enemyType) {
+  drawAlert();
+}
+
+function winAlert() {
   alertElement.style.backgroundColor = 'green';
   alertText.innerText = 'You Won !';
   alertElement.classList.remove('invisible');
   alertElement.classList.add('alertAppearAnimation');
+}
+
+function lossAlert() {
+  alertElement.style.backgroundColor = 'brown';
+  alertText.innerText = 'You Lost !';
+  alertElement.classList.remove('invisible');
+  alertElement.classList.add('alertAppearAnimation');
+}
+
+function drawAlert() {
+  alertElement.style.backgroundColor = 'gold';
+  alertText.innerText = 'Draw !';
+  alertElement.classList.remove('invisible');
+  alertElement.classList.add('alertSlideAnimation');
+
+  setTimeout(() => {
+    clearBattleContainer();
+  }, 750);
+
+  setTimeout(() => {
+    alertElement.classList.add('invisible');
+    alertElement.classList.remove('alertSlideAnimation');
+  }, 1500);
 }
