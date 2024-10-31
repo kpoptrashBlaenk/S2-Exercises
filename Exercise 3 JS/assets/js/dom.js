@@ -60,3 +60,36 @@ footer.style.textAlign = 'center';
 // for (var i = number; i > 0; i--) {
 //   createOnesAndAppend(color2);
 // }
+
+// Exercise 5
+var blocEx5 = document.querySelector('#blocEx5');
+var characters = [
+  { name: 'Anakin Skywalker', online: true },
+  { name: 'Obi-Wan Kenobi', online: true },
+  { name: 'Ahsoka Tano', online: false },
+  { name: 'General Grievous', online: false },
+  { name: 'Darth Maul', online: true },
+  { name: 'Darth Sidious', online: false },
+  { name: 'Count Dooku', online: true },
+  { name: 'Padmé Amidala', online: false },
+  { name: 'Yoda', online: true },
+];
+
+var ul = document.createElement('ul');
+
+for (var i = 0; i < characters.length; i++) {
+  var li = document.createElement('li');
+  li.innerText = characters[i].name;
+
+  if (characters[i].online) {
+    li.style.backgroundColor = 'green';
+    li.style.color = 'blue';
+  } else {
+    li.style.backgroundColor = 'white';
+    li.style.color = 'red';
+  }
+
+  ul.append(li);
+}
+
+blocEx5.append(ul);
