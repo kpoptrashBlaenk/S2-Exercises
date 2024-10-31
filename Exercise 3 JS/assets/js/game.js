@@ -47,6 +47,7 @@ for (let i = 0; i < types.length; i++) {
 
 // ########## Battle ##########
 let lockInput = false;
+let attacker = false;
 const battleContainer = document.querySelector('#battleContainer');
 const vsElement = document.querySelector('#vs');
 const playerElement = document.querySelector('#playerType');
@@ -55,6 +56,9 @@ const typeContainers = document.querySelectorAll('.typeContainer');
 const alertElement = document.querySelector('#alert');
 const alertText = document.querySelector('#alertText');
 const alertButton = document.querySelector('#alertButton');
+const turnElement = document.querySelector('#turn');
+const turnText = document.querySelector('#turnText');
+const turnButton = document.querySelector('#turnButton');
 
 // Type Containers Click
 typeContainers.forEach((element) => {
@@ -76,7 +80,7 @@ alertButton.addEventListener('click', () => {
     alertElement.classList.add('invisible');
     alertElement.classList.remove('alertDisappearAnimation');
 
-    lockInput = false;
+    chooseAttacker();
   }, 500);
 });
 
@@ -146,6 +150,30 @@ function drawAlert() {
     alertButton.classList.remove('invisible');
     alertElement.classList.add('invisible');
     alertElement.classList.remove('alertSlideAnimation');
-    lockInput = false;
+    chooseAttacker();
   }, 1500);
 }
+
+// Select Attacker
+function chooseAttacker() {
+  if (Math.floor(Math.random() * 2) === 0) {
+    attacker = true;
+  } else {
+    attacker = false;
+  }
+
+  if (attacker) {
+    turnText.innerText = 'You are the attacker';
+    turnElement.style.backgroundColor = 'red';
+  } else {
+    turnText.innerText = 'You are the defender';
+    turnElement.style.backgroundColor = 'blue';
+  }
+
+  turnElement.classList.remove('invisible');
+}
+
+turnButton.addEventListener('click', () => {
+  turnElement.classList.add('invisible');
+  lockInput = false;
+});
