@@ -100,3 +100,29 @@ colorButtonNotRandom.addEventListener('click', (event) => {
 function applyColors() {
   ex4.style.backgroundColor = `rgb(${showRed.value}, ${showGreen.value}, ${showBlue.value})`;
 }
+
+// Exercise 5
+var title1 = document.querySelector('#title1');
+var title2 = document.querySelector('#title2');
+var title3 = document.querySelector('#title3');
+var content1 = document.querySelector('#content1');
+var content2 = document.querySelector('#content2');
+var content3 = document.querySelector('#content3');
+
+title1.addEventListener('click', () => {
+  accordion(content1);
+});
+title2.addEventListener('click', () => {
+  accordion(content2);
+});
+title3.addEventListener('click', () => {
+  accordion(content3);
+});
+
+function accordion(contentToShow) {
+  content1.classList.add('invisible');
+  content2.classList.add('invisible');
+  content3.classList.add('invisible');
+
+  contentToShow.classList.remove('invisible');
+}
