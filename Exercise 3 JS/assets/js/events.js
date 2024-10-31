@@ -32,3 +32,43 @@ submitButton.addEventListener('click', (event) => {
   var ageInYears = Math.floor(ageInMilliseconds / (1000 * 60 * 60 * 24 * 365.25));
   resAge.innerText = `Age: ${ageInYears}`;
 });
+
+// Exercise 3
+var cube = document.querySelector('#cube');
+var cubeHeight = 50;
+document.addEventListener('keydown', (event) => {
+  switch (event.key) {
+    case 'ArrowUp':
+      if (cube.offsetTop > 0) {
+        cube.style.top = `${cube.offsetTop - cubeHeight}px`;
+      }
+      break;
+    case 'ArrowDown':
+      if (cube.offsetTop < window.innerHeight - cube.offsetHeight) {
+        cube.style.top = `${cube.offsetTop + cubeHeight}px`;
+      }
+      break;
+    case 'ArrowLeft':
+      if (cube.offsetLeft > 0) {
+        cube.style.left = `${cube.offsetLeft - cubeHeight}px`;
+      }
+      break;
+    case 'ArrowRight':
+      if (cube.offsetLeft - cubeHeight < window.innerWidth) {
+        cube.style.left = `${cube.offsetLeft + cubeHeight}px`;
+      }
+      break;
+  }
+
+  // Check if cube touches border
+  if (
+    cube.offsetTop === 0 ||
+    cube.offsetTop === cube.offsetTop < window.innerHeight - cube.offsetHeight ||
+    cube.offsetLeft === 0 ||
+    cube.offsetLeft === cube.offsetTop < window.innerHeight - cube.offsetHeight
+  ) {
+    cube.style.backgroundColor = 'red';
+  } else {
+    cube.style.backgroundColor = 'black';
+  }
+});
