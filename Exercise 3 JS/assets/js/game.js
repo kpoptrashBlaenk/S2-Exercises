@@ -46,6 +46,7 @@ for (let i = 0; i < types.length; i++) {
 }
 
 // ########## Battle ##########
+let lockInput = false;
 const battleContainer = document.querySelector('#battleContainer');
 const vsElement = document.querySelector('#vs');
 const playerElement = document.querySelector('#playerType');
@@ -57,7 +58,9 @@ const alertButton = document.querySelector('#alertButton');
 
 typeContainers.forEach((element) => {
   element.addEventListener('click', () => {
-    animateFight(element.id);
+    if (!lockInput) {
+      animateFight(element.id);
+    }
   });
 });
 
@@ -71,11 +74,14 @@ alertButton.addEventListener('click', () => {
   setTimeout(() => {
     alertElement.classList.add('invisible');
     alertElement.classList.remove('alertDisappearAnimation');
+
+    lockInput = false;
   }, 500);
 });
 
 // Battle Animation in Battle Container
 function animateFight(playerType) {
+  lockInput = true;
   battleContainer.classList.remove('invisible');
   playerElement.src = `${typeAssetsPath}${playerType}.png`;
 
@@ -132,5 +138,6 @@ function drawAlert() {
   setTimeout(() => {
     alertElement.classList.add('invisible');
     alertElement.classList.remove('alertSlideAnimation');
+    lockInput = false;
   }, 1500);
 }
