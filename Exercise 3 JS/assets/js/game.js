@@ -56,6 +56,7 @@ const alertElement = document.querySelector('#alert');
 const alertText = document.querySelector('#alertText');
 const alertButton = document.querySelector('#alertButton');
 
+// Type Containers Click
 typeContainers.forEach((element) => {
   element.addEventListener('click', () => {
     if (!lockInput) {
@@ -99,6 +100,7 @@ function animateFight(playerType) {
   }, 3000);
 }
 
+// Clear Battle Container
 function clearBattleContainer() {
   battleContainer.classList.add('invisible');
   vsElement.classList.add('invisible');
@@ -106,11 +108,12 @@ function clearBattleContainer() {
   enemyElement.src = '';
 }
 
-// Check Results
+// Results
 function checkResult(playerType, enemyType) {
   drawAlert();
 }
 
+// Win
 function winAlert() {
   alertElement.style.backgroundColor = 'green';
   alertText.innerText = 'You Won !';
@@ -118,6 +121,7 @@ function winAlert() {
   alertElement.classList.add('alertAppearAnimation');
 }
 
+// Loss
 function lossAlert() {
   alertElement.style.backgroundColor = 'brown';
   alertText.innerText = 'You Lost !';
@@ -125,6 +129,7 @@ function lossAlert() {
   alertElement.classList.add('alertAppearAnimation');
 }
 
+// Draw
 function drawAlert() {
   alertElement.style.backgroundColor = 'gold';
   alertText.innerText = 'Draw !';
