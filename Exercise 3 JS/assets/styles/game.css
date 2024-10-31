@@ -1,3 +1,5 @@
+@import url('./grid.css');
+
 * {
   margin: 0;
   padding: 0;
@@ -7,4 +9,9 @@
 .container {
   margin: 50px;
   border: 1px solid black;
+}
+
+.typeContainer > img {
+  height: 50px;
+  width: 50px;
 }
