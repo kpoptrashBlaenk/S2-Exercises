@@ -17,6 +17,10 @@
   border: 1px solid black;
 }
 
+.invisible {
+  visibility: hidden;
+}
+
 /* ######### Type Container ######### */
 .typeContainer:hover {
   cursor: pointer;

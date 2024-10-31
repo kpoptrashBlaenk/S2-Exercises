@@ -28,6 +28,7 @@ for (let i = 0; i < types.length; i++) {
   const typeContainer = document.createElement('div');
   typeContainer.classList.add('typeContainer', 'col-xs-6', 'col-sm-3', 'col-lg-2');
   typeContainer.style.backgroundColor = types[i].color;
+  typeContainer.id = types[i].type;
 
   // Text
   const typeText = document.createElement('p');
@@ -42,4 +43,29 @@ for (let i = 0; i < types.length; i++) {
   typeContainer.appendChild(typeImage);
   typeContainer.appendChild(typeText);
   typesContainer.appendChild(typeContainer);
+}
+
+// ########## Battle ##########
+const battleContainer = document.querySelector('#battleContainer');
+const vsElement = document.querySelector('#vs');
+const playerElement = document.querySelector('#playerType');
+const enemyElement = document.querySelector('#enemyType');
+const typeContainers = document.querySelectorAll('.typeContainer');
+
+typeContainers.forEach((element) => {
+  element.addEventListener('click', () => {
+    animateFight(element.id);
+  });
+});
+
+function animateFight(playerType) {
+  battleContainer.classList.remove('invisible');
+  playerElement.src = `${typeAssetsPath}${playerType}.png`;
+  setTimeout(() => {
+    vsElement.classList.remove('invisible');
+  }, 1000);
+  setTimeout(() => {
+    const enemyType = types[Math.floor(Math.random() * 18)].type;
+    enemyElement.src = `${typeAssetsPath}${enemyType}.png`;
+  }, 2000);
 }
