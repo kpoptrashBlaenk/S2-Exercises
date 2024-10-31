@@ -78,10 +78,33 @@ var characters = [
 var ul = document.createElement('ul');
 
 for (var i = 0; i < characters.length; i++) {
-  var li = document.createElement('li');
-  li.innerText = characters[i].name;
+  var li = createCharacter(characters[i]);
 
-  if (characters[i].online) {
+  ul.append(li);
+}
+
+blocEx5.append(ul);
+
+// while (character !== 'stop') {
+//   var character = prompt('Give me a character name:');
+
+//   if (character !== 'stop') {
+//     var online = confirm('Is the character online?');
+//     var character = {
+//       name: character,
+//       online: online,
+//     };
+
+//     var li = createCharacter(character);
+//     ul.append(li);
+//   }
+// }
+
+function createCharacter(character) {
+  var li = document.createElement('li');
+  li.innerText = character.name;
+
+  if (character.online) {
     li.style.backgroundColor = 'green';
     li.style.color = 'blue';
   } else {
@@ -89,7 +112,5 @@ for (var i = 0; i < characters.length; i++) {
     li.style.color = 'red';
   }
 
-  ul.append(li);
+  return li;
 }
-
-blocEx5.append(ul);
