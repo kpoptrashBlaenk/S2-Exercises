@@ -1,5 +1,10 @@
 @import url('./grid.css');
 
+@font-face {
+  font-family: Pokèmon;
+  src: url('../fonts/pokemon_pixel_font.ttf');
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +16,16 @@
   border: 1px solid black;
 }
 
+.typeContainer:hover {
+  cursor: pointer;
+}
+
 .typeContainer > img {
   height: 50px;
   width: 50px;
+}
+
+.typeContainer > p {
+  margin-bottom: 5px;
+  font-weight: bold;
 }
