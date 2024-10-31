@@ -18,7 +18,7 @@ body {
 }
 
 .container {
-  margin: 50px;
+  margin: 0;
   border: 1px solid black;
 }
 
@@ -28,7 +28,7 @@ body {
 
 /* ######### Type Container ######### */
 .typeContainer {
-  padding: 10px;
+  padding: 5px;
 }
 
 .typeContainer:hover {
@@ -54,6 +54,14 @@ body {
 }
 
 @media screen and (min-width: 700px) {
+  .container {
+    margin: 50px;
+  }
+
+  .typeContainer {
+    padding: 10px;
+  }
+
   #battleContainer {
     height: 40vh;
   }
