@@ -72,3 +72,31 @@ document.addEventListener('keydown', (event) => {
     cube.style.backgroundColor = 'black';
   }
 });
+
+// Exercise 4
+var showRed = document.querySelector('#showRed');
+var showGreen = document.querySelector('#showGreen');
+var showBlue = document.querySelector('#showBlue');
+var colorButton = document.querySelector('#colorButton');
+var colorButtonNotRandom = document.querySelector('#colorButtonNotRandom');
+var inputs = [showRed, showGreen, showBlue];
+
+colorButton.addEventListener('click', (event) => {
+  event.preventDefault();
+
+  for (var i = 0; i < inputs.length; i++) {
+    inputs[i].value = Math.floor(Math.random() * 256);
+  }
+
+  applyColors();
+});
+
+colorButtonNotRandom.addEventListener('click', (event) => {
+  event.preventDefault();
+
+  applyColors();
+});
+
+function applyColors() {
+  ex4.style.backgroundColor = `rgb(${showRed.value}, ${showGreen.value}, ${showBlue.value})`;
+}
