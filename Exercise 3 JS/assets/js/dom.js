@@ -31,3 +31,32 @@ footer.style.textAlign = 'center';
 //     ulEx3.append(li);
 //   }
 // }
+
+// Exercise 4
+// function createOnesAndAppend(color) {
+//   var span = document.createElement('span');
+//   var br = document.createElement('br');
+//   var text = '';
+
+//   for (var j = 0; j < i; j++) {
+//     text += '1';
+//   }
+
+//   span.innerText = text;
+//   span.style.color = color;
+//   blocEx4.append(span);
+//   blocEx4.append(br);
+// }
+
+// var number = +prompt('Give a number');
+// var color = prompt('Give a color');
+// var color2 = prompt('Give a second color');
+// var blocEx4 = document.querySelector('#blocEx4');
+
+// for (var i = 1; i < number + 1; i++) {
+//   createOnesAndAppend(color);
+// }
+
+// for (var i = number; i > 0; i--) {
+//   createOnesAndAppend(color2);
+// }
