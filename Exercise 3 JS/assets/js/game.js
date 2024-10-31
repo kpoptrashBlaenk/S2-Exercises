@@ -61,6 +61,7 @@ typeContainers.forEach((element) => {
   });
 });
 
+// Alert Button
 alertButton.addEventListener('click', () => {
   alertElement.classList.remove('alertAppearAnimation');
   alertElement.classList.add('alertDisappearAnimation');
@@ -71,6 +72,7 @@ alertButton.addEventListener('click', () => {
   }, 500);
 });
 
+// Battle Animation in Battle Container
 function animateFight(playerType) {
   battleContainer.classList.remove('invisible');
   playerElement.src = `${typeAssetsPath}${playerType}.png`;
@@ -89,6 +91,7 @@ function animateFight(playerType) {
   }, 3000);
 }
 
+// Check Results
 function checkResult(playerType, enemyType) {
   alertElement.style.backgroundColor = 'green';
   alertText.innerText = 'You Won !';
