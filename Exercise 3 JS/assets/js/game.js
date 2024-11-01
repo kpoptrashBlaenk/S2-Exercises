@@ -20,6 +20,26 @@ const types = [
   { type: 'Steel', color: '#B8B8D0', textColor: '#333333' },
   { type: 'Water', color: '#6890F0', textColor: '#FFFFFF' },
 ];
+const typeEffectiveness = {
+  normal: { rock: 0, ghost: 0, steel: 0 },
+  fire: { grass: 1, ice: 1, bug: 1, steel: 1, fire: 0, water: 0, rock: 0, dragon: 0 },
+  water: { fire: 1, ground: 1, rock: 1, water: 0, grass: 0, dragon: 0 },
+  electric: { water: 1, flying: 1, ground: 0, grass: 0, dragon: 0, electric: 0 },
+  grass: { water: 1, ground: 1, rock: 1, fire: 0, grass: 0, poison: 0, flying: 0, bug: 0, dragon: 0, steel: 0 },
+  ice: { grass: 1, ground: 1, flying: 1, dragon: 1, fire: 0, water: 0, ice: 0, steel: 0 },
+  fighting: { normal: 1, ice: 1, rock: 1, dark: 1, steel: 1, ghost: 0, fairy: 0 },
+  poison: { grass: 1, fairy: 1, steel: 0 },
+  ground: { fire: 1, electric: 1, poison: 1, rock: 1, grass: 0, flying: 0 },
+  flying: { grass: 1, fighting: 1, bug: 1, electric: 0, rock: 0, steel: 0 },
+  psychic: { fighting: 1, poison: 1, dark: 0, steel: 0 },
+  bug: { grass: 1, psychic: 1, dark: 1, fire: 0, fighting: 0, poison: 0, flying: 0, ghost: 0, steel: 0, fairy: 0 },
+  rock: { fire: 1, ice: 1, flying: 1, bug: 1, fighting: 0, ground: 0, steel: 0 },
+  ghost: { psychic: 1, ghost: 1, normal: 0, dark: 0 },
+  dragon: { dragon: 1, fairy: 0, steel: 0 },
+  dark: { psychic: 1, ghost: 1, fighting: 0, fairy: 0 },
+  steel: { ice: 1, rock: 1, fairy: 1, fire: 0, water: 0, electric: 0 },
+  fairy: { fighting: 1, dragon: 1, dark: 1, fire: 0, poison: 0, steel: 0 },
+};
 
 // ########## Types Container ##########
 const typesContainer = document.querySelector('#typesContainer');
@@ -89,13 +109,13 @@ function animateFight(playerType) {
   lockInput = true;
   battleContainer.classList.remove('invisible');
   playerElement.src = `${typeAssetsPath}${playerType}.png`;
+  const enemyType = types[Math.floor(Math.random() * 18)].type;
 
   setTimeout(() => {
     vsElement.classList.remove('invisible');
   }, 1000);
 
   setTimeout(() => {
-    const enemyType = types[Math.floor(Math.random() * 18)].type;
     enemyElement.src = `${typeAssetsPath}${enemyType}.png`;
   }, 2000);
 
@@ -114,8 +134,34 @@ function clearBattleContainer() {
 
 // Results
 function checkResult(playerType, enemyType) {
-  // TODO: BATTLE LOGIC
-  drawAlert();
+  playerType = playerType.toLowerCase();
+  enemyType = enemyType.toLowerCase();
+
+  if (attacker) {
+    switch (typeEffectiveness[playerType][enemyType]) {
+      case 1:
+        winAlert();
+        break;
+      case 0:
+        lossAlert();
+        break;
+      default:
+        drawAlert();
+        break;
+    }
+  } else {
+    switch (typeEffectiveness[enemyType][playerType]) {
+      case 1:
+        lossAlert();
+        break;
+      case 0:
+        winAlert();
+        break;
+      default:
+        drawAlert();
+        break;
+    }
+  }
 }
 
 // Win
@@ -177,3 +223,5 @@ turnButton.addEventListener('click', () => {
   turnElement.classList.add('invisible');
   lockInput = false;
 });
+
+chooseAttacker();
