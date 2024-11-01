@@ -15,11 +15,19 @@
 
 body {
   overflow-x: hidden;
+  font-family: 'Pokemon';
+  box-sizing: border-box;
 }
 
-.container {
-  margin: 0;
-  border: 1px solid black;
+.background {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px);
+  z-index: -1;
 }
 
 .invisible {

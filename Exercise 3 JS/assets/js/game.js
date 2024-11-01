@@ -85,6 +85,7 @@ typeContainers.forEach((element) => {
   element.addEventListener('click', () => {
     if (!lockInput) {
       animateFight(element.id);
+      changeBackground(element.id);
     }
   });
 });
@@ -223,5 +224,10 @@ turnButton.addEventListener('click', () => {
   turnElement.classList.add('invisible');
   lockInput = false;
 });
-
 chooseAttacker();
+
+// Background
+function changeBackground(image) {
+  document.querySelector('.background').style.backgroundImage = `url('../assets/images/backgrounds/${image}.jpg')`;
+}
+changeBackground('Default');
