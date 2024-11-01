@@ -66,7 +66,7 @@ for (let i = 0; i < types.length; i++) {
 }
 
 // ########## Battle ##########
-let lockInput = false;
+let lockInput = true;
 let attacker = false;
 const battleContainer = document.querySelector('#battleContainer');
 const vsElement = document.querySelector('#vs');
