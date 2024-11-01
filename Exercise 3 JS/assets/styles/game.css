@@ -19,6 +19,13 @@ body {
   box-sizing: border-box;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
 .background {
   position: absolute;
   width: 100vw;
