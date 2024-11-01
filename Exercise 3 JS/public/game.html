@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game</title>
+    <link href="../assets/styles/game.css" type="text/css" rel="stylesheet" />
+  </head>
+  <div class="background"></div>
+  <body>
+    <main>
+      <section id="battleContainer" class="row invisible">
+        <div class="col-xs-6 col-lg-3">
+          <img id="playerType" src="" />
+        </div>
+        <div id="vs" class="col-xs-6 col-lg-3 invisible">
+          <img src="../assets/images/misc/vs.webp" height="150" width="150" />
+        </div>
+        <div class="col-xs-6 col-lg-3">
+          <img id="enemyType" src="" />
+        </div>
+      </section>
+      <section id="typesContainer" class="row"></section>
+    </main>
+    <article id="alert" class="invisible">
+      <div id="alertText"></div>
+      <button id="alertButton">Again</button>
+    </article>
+    <article id="turn" class="invisible">
+      <div id="turnText"></div>
+      <button id="turnButton">Ok</button>
+    </article>
+  </body>
+  <script src="../assets/js/game.js"></script>
+</html>

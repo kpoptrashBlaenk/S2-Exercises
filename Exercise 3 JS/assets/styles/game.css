@@ -1,0 +1,166 @@
+/* ######### Type Container ######### */
+@import url('./grid.css');
+
+@font-face {
+  font-family: Pokemon;
+  src: url('../fonts/Pokemon\ Classic.ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Pokemon';
+}
+
+body {
+  overflow-x: hidden;
+  font-family: 'Pokemon';
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.background {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px);
+  z-index: -1;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+/* ######### Type Container ######### */
+.typeContainer {
+  padding: 5px;
+}
+
+.typeContainer:hover {
+  cursor: pointer;
+}
+
+.typeContainer > img {
+  height: 50px;
+  width: 50px;
+}
+
+.typeContainer > p {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* ######### Battle Container ######### */
+#battleContainer {
+  display: flex; /* Vertical center */
+  align-items: center;
+  justify-content: center;
+  height: 20vh;
+}
+
+@media screen and (min-width: 700px) {
+  .container {
+    margin: 50px;
+  }
+
+  .typeContainer {
+    padding: 10px;
+  }
+
+  #battleContainer {
+    height: 40vh;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #battleContainer {
+    height: 55vh;
+  }
+}
+
+/* ######### Alert ######### */
+#alert {
+  position: absolute;
+  top: 50%;
+  transform: translateX(10vw) translateY(-50%);
+  width: 80%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#alert > * {
+  margin: 10px;
+  padding: 5px;
+}
+
+.alertSlideAnimation {
+  animation: alertSlide 1.5s ease-in-out;
+}
+
+.alertAppearAnimation {
+  animation: alertAppear 0.5s ease-in;
+}
+
+.alertDisappearAnimation {
+  animation: alertDisappear 0.5s ease-in;
+}
+
+@keyframes alertSlide {
+  0% {
+    transform: translateY(-50%) translateX(-100vw);
+  }
+  50% {
+    transform: translateY(-50%) translateX(10vw);
+  }
+  100% {
+    transform: translateY(-50%) translateX(100vw);
+  }
+}
+
+@keyframes alertAppear {
+  from {
+    transform: translateY(-50%) translateX(-100vw);
+  }
+  to {
+    transform: translateY(-50%) translateX(10vw);
+  }
+}
+
+@keyframes alertDisappear {
+  from {
+    transform: translateY(-50%) translateX(10vw);
+  }
+  to {
+    transform: translateY(-50%) translateX(100vw);
+  }
+}
+
+/* ######### Turn ######### */
+#turn {
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  top: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#turn > * {
+  margin: 10px;
+  padding: 5px;
+}
