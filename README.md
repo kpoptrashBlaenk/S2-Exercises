@@ -20,3 +20,6 @@
 - DOM
 - Events
 - Game
+
+### Exercise 4: SQL
+- DB Beginning
