@@ -6,6 +6,7 @@
     <title>DB Beginning</title>
   </head>
   <body>
+    <h1>Part 1</h1>
     <p>On se propose de créer la base de données qui permettra de gérer les examens oraux en vue de l’obtention du titre de développeur Web et mobile.</p>
     <p>Des travaux initiaux ont permis d’aboutir à la construction du schéma relationnel suivant :</p>
     <ul>
@@ -20,29 +21,81 @@
     </ol>
     <br />
     <ol>
-      <ul>
-        <li>
-          Clés primaires:
-          <ul>
-            <li>num_etudiant (Etudiant)</li>
-            <li>num_stage (Stage)</li>
-            <li>num_entreprise (Entreprise)</li>
-            <li>num_oral (Oral)</li>
-          </ul>
-        </li>
-        <li>
-          Clés étrangères:
-          <ul>
-            <li>num_etudiant (Stage)</li>
-            <li>num_entreprise (Stage)</li>
-            <li>num_stage (Oral)</li>
-          </ul>
-        </li>
-        <li>Clés alternatives n'existent pas. Pas des autres clés uniques.</li>
-      </ul>
+      <li>
+        <ul>
+          <li>
+            Clés primaires:
+            <ul>
+              <li>num_etudiant (Etudiant)</li>
+              <li>num_stage (Stage)</li>
+              <li>num_entreprise (Entreprise)</li>
+              <li>num_oral (Oral)</li>
+            </ul>
+          </li>
+          <li>
+            Clés étrangères:
+            <ul>
+              <li>num_etudiant (Stage)</li>
+              <li>num_entreprise (Stage)</li>
+              <li>num_stage (Oral)</li>
+            </ul>
+          </li>
+          <li>Clés alternatives n'existent pas. Pas des autres clés uniques.</li>
+        </ul>
+      </li>
+      <li>
+        <br />
+        <img src="../assets/images/db_classment.png" width="512" />
+      </li>
     </ol>
-    <li>
-      <img src="../assets/images/db_classment.png" width="512" />
-    </li>
+
+    <h1>Part 2</h1>
+    <p>On se propose de créer la base de données qui permettra de gérer les cartes grises de véhicule. Une étude initial a permis de déterminer le schéma relationnel suivant :</p>
+    <ul>
+      <li>Voiture (num_voiture, date_immatricualtion, num_type, couleur, pays_fabrication)</li>
+      <li>Modèle (num_type, nom, classe, marque, puissance)</li>
+      <li>Conducteur (num_conducteur, nom_conducteur, adresse)</li>
+      <li>Appartient (immatriculation, date_achat, num_conducteur)</li>
+      <li>Département (num_département, préfecture)</li>
+      <li>Immatriculation (immatriculation, num_département, no_vehicule)</li>
+    </ul>
+    <ol>
+      <li>Quelles sont les clés primaires et étrangères du schéma relationnel ? existe-t-il des clés alternatives ?</li>
+      <li>Construisez le graphe des dépendances fonctionnelles existant entre les attributs de la Base de données</li>
+    </ol>
+    <br />
+    <ol>
+      <li>
+        <ul>
+          <li>
+            Clés primaires:
+            <ul>
+              <li>num_voiture (Voiture)</li>
+              <li>num_type (Modèle)</li>
+              <li>num_conducteur (Conducteur)</li>
+              <li>immatriculation (Appartient)</li>
+              <li>num_département (Département)</li>
+              <li>immatriculation (Immatriculation)</li>
+            </ul>
+          </li>
+          <li>
+            Clés étrangères:
+            <ul>
+              <li>num_type (Voiture)</li>
+              <li>num_conducteur (Appartient)</li>
+              <li>num_département (Immatriculation)</li>
+            </ul>
+          </li>
+          <ul>
+            Clés alternatives:
+            <li>immatriculation (Appartient & Immatriculation)</li>
+          </ul>
+        </ul>
+      </li>
+      <li>
+        <br />
+        <img src="../assets/images/db_classment2.png" width="512" />
+      </li>
+    </ol>
   </body>
 </html>
