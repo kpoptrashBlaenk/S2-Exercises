@@ -6,7 +6,43 @@
     <title>DB Beginning</title>
   </head>
   <body>
-    
-
+    <p>On se propose de créer la base de données qui permettra de gérer les examens oraux en vue de l’obtention du titre de développeur Web et mobile.</p>
+    <p>Des travaux initiaux ont permis d’aboutir à la construction du schéma relationnel suivant :</p>
+    <ul>
+      <li>Etudiant (num_etudiant, nom_etudiant, prenom_etudiant)</li>
+      <li>Stage ( num_stage, num_etudiant, num_entreprise, date_debut, date_fin)</li>
+      <li>Entreprise (num_entreprise, nom_entreprise, adresse)</li>
+      <li>Oral (num_oral, num_stage, date, note)</li>
+    </ul>
+    <ol>
+      <li>Quelles sont les clés primaires et les clés étrangères pour chaque relation ? Existe-t-il des clés alternatives ?</li>
+      <li>Construisez grâce aux éléments en votre possession le graphe des dépendances fonctionnelles existant entre tous les attributs de cette BdD</li>
+    </ol>
+    <br />
+    <ol>
+      <ul>
+        <li>
+          Clés primaires:
+          <ul>
+            <li>num_etudiant (Etudiant)</li>
+            <li>num_stage (Stage)</li>
+            <li>num_entreprise (Entreprise)</li>
+            <li>num_oral (Oral)</li>
+          </ul>
+        </li>
+        <li>
+          Clés étrangères:
+          <ul>
+            <li>num_etudiant (Stage)</li>
+            <li>num_entreprise (Stage)</li>
+            <li>num_stage (Oral)</li>
+          </ul>
+        </li>
+        <li>Clés alternatives n'existent pas. Pas des autres clés uniques.</li>
+      </ul>
+    </ol>
+    <li>
+      <img src="../assets/images/db_classment.png" width="512" />
+    </li>
   </body>
 </html>
